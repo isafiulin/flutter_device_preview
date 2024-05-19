@@ -2,15 +2,14 @@ import 'package:device_preview/device_preview.dart';
 import 'package:device_preview/src/state/store.dart';
 import 'package:device_preview/src/views/tool_panel/widgets/search_field.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
 
 /// A page for picking a simulated locale.
 class LocalePicker extends StatefulWidget {
   /// Create a new page for picking a simulated locale.
   const LocalePicker({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   _LocalePickerState createState() => _LocalePickerState();

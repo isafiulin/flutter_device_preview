@@ -1,6 +1,5 @@
 import 'package:device_preview/src/state/store.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
 
 import 'section.dart';
@@ -12,12 +11,12 @@ class AccessibilitySection extends StatelessWidget {
   /// The items can be hidden with [accessibleNavigation], [invertColors],
   /// [textScalingFactor] parameters.
   const AccessibilitySection({
-    Key? key,
+    super.key,
     this.accessibleNavigation = true,
     this.invertColors = true,
     this.textScalingFactor = true,
     this.boldText = true,
-  }) : super(key: key);
+  });
 
   /// Allow to enable accessible navigation mode.
   final bool accessibleNavigation;

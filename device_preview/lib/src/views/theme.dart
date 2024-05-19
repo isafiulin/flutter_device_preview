@@ -28,7 +28,13 @@ extension ThemeToolbarExtension on DevicePreviewToolBarThemeData {
           primaryColor: accentColor,
           primaryColorDark: accentColor,
           indicatorColor: accentColor,
-          toggleableActiveColor: accentColor,
+          switchTheme: SwitchThemeData(
+            thumbColor: WidgetStateProperty.all(accentColor),
+            trackColor: WidgetStateProperty.resolveWith(
+              (states) =>
+                  states.contains(WidgetState.selected) ? accentColor : null,
+            ),
+          ),
           highlightColor: accentColor.withOpacity(0.1),
           sliderTheme: base.sliderTheme.copyWith(
             thumbColor: accentColor,
@@ -51,7 +57,13 @@ extension ThemeToolbarExtension on DevicePreviewToolBarThemeData {
           primaryColor: accentColor,
           primaryColorDark: accentColor,
           indicatorColor: accentColor,
-          toggleableActiveColor: accentColor,
+          switchTheme: SwitchThemeData(
+            thumbColor: WidgetStateProperty.all(accentColor),
+            trackColor: WidgetStateProperty.resolveWith(
+              (states) =>
+                  states.contains(WidgetState.selected) ? accentColor : null,
+            ),
+          ),
           highlightColor: accentColor,
           appBarTheme: base.appBarTheme.copyWith(
             color: barColor,

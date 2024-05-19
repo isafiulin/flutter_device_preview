@@ -1,6 +1,5 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 /// An icon for a [DeviceType].
 class DeviceTypeIcon extends StatelessWidget {
@@ -8,10 +7,10 @@ class DeviceTypeIcon extends StatelessWidget {
   ///
   /// A [color] can be given to customize the icon color.
   const DeviceTypeIcon({
-    Key? key,
+    super.key,
     required this.type,
     this.color,
-  }) : super(key: key);
+  });
 
   final Color? color;
   final DeviceType type;

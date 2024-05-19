@@ -1,11 +1,7 @@
 import 'package:device_preview/device_preview.dart';
-import 'package:device_preview/src/state/store.dart';
 import 'package:device_preview/src/views/theme.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
-
-import 'section.dart';
 
 /// All the settings for customizing the preview.
 class SettingsSection extends StatelessWidget {
@@ -13,10 +9,10 @@ class SettingsSection extends StatelessWidget {
   ///
   /// The items can be hidden with [backgroundTheme], [toolsTheme] parameters.
   const SettingsSection({
-    Key? key,
+    super.key,
     this.backgroundTheme = true,
     this.toolsTheme = true,
-  }) : super(key: key);
+  });
 
   /// Allow to edit the current background theme.
   final bool backgroundTheme;
@@ -53,7 +49,7 @@ class SettingsSection extends StatelessWidget {
                 shape: BoxShape.circle,
                 color: background.scaffoldBackgroundColor,
                 border: Border.all(
-                  color: toolbar.backgroundColor,
+                  color: toolbar.colorScheme.onSurface,
                   width: 1,
                 ),
               ),
@@ -84,7 +80,7 @@ class SettingsSection extends StatelessWidget {
                 shape: BoxShape.circle,
                 color: toolbar.scaffoldBackgroundColor,
                 border: Border.all(
-                  color: toolbar.backgroundColor,
+                  color: toolbar.colorScheme.onSurface,
                   width: 1,
                 ),
               ),

@@ -274,7 +274,7 @@ List<Widget> buildCustomDeviceTiles(BuildContext context) {
               type: type,
             ),
             title: Text(
-              describeEnum(type),
+              type.name,
             ),
             onTap: () {
               final store = context.read<DevicePreviewStore>();

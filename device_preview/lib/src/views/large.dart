@@ -2,7 +2,6 @@ import 'package:device_preview/src/state/store.dart';
 import 'package:device_preview/src/views/theme.dart';
 import 'package:device_preview/src/views/tool_panel/tool_panel.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
 
@@ -10,9 +9,9 @@ import 'package:provider/provider.dart';
 class DervicePreviewLargeLayout extends StatefulWidget {
   /// Create a new panel from the given tools grouped as [slivers].
   const DervicePreviewLargeLayout({
-    Key? key,
+    super.key,
     required this.slivers,
-  }) : super(key: key);
+  });
 
   /// The sections containing the tools.
   ///

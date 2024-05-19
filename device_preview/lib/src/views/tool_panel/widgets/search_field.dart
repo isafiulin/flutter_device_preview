@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 /// A search field for the tool menu.
 class ToolbarSearchField extends StatefulWidget {
@@ -9,11 +8,11 @@ class ToolbarSearchField extends StatefulWidget {
   ///
   /// The [onTextChanged] is invoked each time the [text] is changed by the user.
   const ToolbarSearchField({
-    Key? key,
+    super.key,
     required this.hintText,
     required this.onTextChanged,
     this.text = '',
-  }) : super(key: key);
+  });
 
   /// The current field content.
   final String text;
@@ -80,8 +79,8 @@ class _ToolbarSearchFieldState extends State<ToolbarSearchField> {
             border: InputBorder.none,
             prefixIcon: const Icon(Icons.search),
             suffix: InkWell(
-              child: const Icon(Icons.close),
               onTap: _clear,
+              child: const Icon(Icons.close),
             ),
           ),
         ),

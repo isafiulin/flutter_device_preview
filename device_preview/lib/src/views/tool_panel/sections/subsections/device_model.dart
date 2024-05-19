@@ -15,8 +15,8 @@ part 'custom_device.dart';
 class DeviceModelPicker extends StatefulWidget {
   /// Create a new page for picking a simulated device model.
   const DeviceModelPicker({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   State<DeviceModelPicker> createState() => _DeviceModelPickerState();
@@ -68,13 +68,13 @@ class _DeviceModelPickerState extends State<DeviceModelPicker>
             ..._allPlatforms.map(
               (e) => Tab(
                 icon: TargetPlatformIcon(platform: e),
-                text: describeEnum(e),
+                text: e.name,
               ),
             ),
             const Tab(
               icon: Icon(Icons.tune),
               text: 'Custom',
-            )
+            ),
           ],
         ),
       ),
@@ -100,9 +100,8 @@ class _DeviceModelPickerState extends State<DeviceModelPicker>
 
 class _PlatformModelPicker extends StatelessWidget {
   const _PlatformModelPicker({
-    Key? key,
     required this.platform,
-  }) : super(key: key);
+  });
 
   final TargetPlatform platform;
 
@@ -172,7 +171,7 @@ class _TypeSectionHeader extends StatelessWidget {
           }
         }()
             .toUpperCase(),
-        style: theme.textTheme.subtitle2?.copyWith(
+        style: theme.textTheme.titleSmall?.copyWith(
           color: theme.hintColor,
         ),
       ),
@@ -182,9 +181,9 @@ class _TypeSectionHeader extends StatelessWidget {
 
 class DeviceTile extends StatelessWidget {
   const DeviceTile({
-    Key? key,
+    super.key,
     required this.info,
-  }) : super(key: key);
+  });
 
   final DeviceInfo info;
 
